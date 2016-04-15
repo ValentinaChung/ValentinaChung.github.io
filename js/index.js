@@ -13,22 +13,8 @@ $(".main").onepage_scroll({
                                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                                     // the browser's width is less than 600, the fallback will kick in.
    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-});
-
-
-// Function for changing background image for location page
-
-$(function(){
-
-  // 1) Add a click event to each li element
-  $('#city-list li').click(function(){
-     
-  // 2) Change background 
-     $('.page4').css("background", "url(images/Chicago.jpg")
-
 
 });
-
 
 
 

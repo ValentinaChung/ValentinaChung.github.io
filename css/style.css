@@ -299,7 +299,7 @@ form ul li input[class="date-input"] {
   font-family: "Source Sans Pro";
   font-weight: 200;
   display: block;
-  background: url(images/datepicker_arrow.png) no-repeat;
+  background: url(../images/datepicker_arrow.png) no-repeat;
   padding-right: 20px;
 /*  width: 10px;*/
 }
@@ -416,6 +416,27 @@ button {
     color: #FFF;
 }
 .room-grand:hover .extra {
+    display: inline-block;
+    color: white;
+    font-family: "Source Sans Pro";
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+
+.room-peninsula .extra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+.room-peninsula:hover .extra {
     display: inline-block;
     color: white;
     font-family: "Source Sans Pro";
