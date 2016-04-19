@@ -443,13 +443,17 @@ h4#grandSuite{
   padding-bottom: 14px;
   margin: 0 auto;
   position: absolute;
-  left: 150px;
+  left: 220px;
   top: 350px;
 }
 
 h4#peninsulaSuite{
   border-bottom: 2px solid #fff;
   padding-bottom: 14px;
+  position: absolute;
+  right: 220px;
+  top: 350px;
+
 }
 
 span.extra {
