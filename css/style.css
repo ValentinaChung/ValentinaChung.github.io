@@ -57,7 +57,7 @@ h2{
   font-weight: 400;
 }
 
-span .VIP {
+span#VIP {
   font-style: italic;
   font-family: "Playfair Display";
   font-weight: 400;
@@ -99,10 +99,8 @@ h3 {
 }
 
 #arrow{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-
-
 
 
 .page2 {
@@ -117,10 +115,30 @@ h3 {
   font-size: 40px;
   font-family: "Playfair Display";
   font-weight: 400;
-  /*margin-bottom: 16%;*/
+  display: inline-block;
+}
+
+#question{
+  margin-bottom: 10%;
 }
 
 form ul li input[id="name-input"] {
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 2px solid #cebeaa;
+  width: 100%;
+  font-size: 28px;
+  background-color: #ac9c82;
+  text-align: center;
+  color: white;
+  font-family: "Source Sans Pro";
+  font-weight: 200;
+  margin: 0;
+  margin-bottom: 7%;
+  outline: none;
+}
+
+form ul li input[id="email-input"] {
   padding-bottom: 12px;
   border: none;
   border-bottom: 2px solid #cebeaa;
@@ -157,6 +175,14 @@ ul #guest-info{
   margin-top: 10%;
 }
 
+span#customer-name{
+  margin-left: 10px;
+}
+
+.success{
+  background: url(../images/checkmark.png) no-repeat right;
+  background-size: 25px;
+}
 
 /*#numbers{
   font-family: "Source Sans Pro";
@@ -193,8 +219,8 @@ a{
 }
 
 .assistantext {
-/*  float: right;*/
   width: 40%; 
+  margin-right: 7%; 
 }
 
 h4{
@@ -206,7 +232,7 @@ h4{
   font-family: "Source Sans Pro";
   font-weight: 200;
   font-size: 22px;
-  line-height: 1.2;
+  line-height: 1.2;k
 }
 
 #contact {
@@ -226,12 +252,22 @@ h4{
   font-weight: 400;
 }
 
-
-
-
-
 .page4 {
-  background: url(../images/Location.png) no-repeat center;
+  background: url(../images/Location.png);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.backgroundStyle{
+  background-repeat: no-repeat;
+  background-position: center;
   left: 0;
   top: 0;
   width: 100%;
@@ -247,8 +283,8 @@ h4{
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 18px;
-  border-bottom: 2px solid #fff;
-  width: 90%;
+  border-bottom: 1px solid #fff;
+  width: 95%;
   margin: 0 auto;
   overflow: hidden;
   display: -webkit-flex;
@@ -257,18 +293,25 @@ h4{
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-top: 6.2%;
+  margin-top: 5%;
 }
 
 #city-list li {
   display: flex;
   justify-content: space-around;
+  padding: 10px 0px;
 }
 
 #city-list li a {
     padding: 10px 16px;
     text-decoration: none;
     color: white;
+    opacity: 0.4;
+}
+
+#city-list li a:hover {
+  opacity: 1;
+  color: white;
 }
 
 /*li a:hover {
@@ -283,30 +326,24 @@ h4{
   padding: 30px 100px;
 }
 
-ul#dates li {
+ul.dates li {
   margin-bottom: 30px;
 }
 
-form ul li input[class="date-input"] {
-  margin: 0 auto;
-  padding-bottom: 4px;
-  border: none;
-  border-bottom: 1px solid #cebeaa;
-  width: 100%;
-  font-size: 22px;
-  text-align: center;
-  color: white;
-  font-family: "Source Sans Pro";
-  font-weight: 200;
-  display: block;
-  background: url(../images/datepicker_arrow.png) no-repeat;
-  padding-right: 20px;
-/*  width: 10px;*/
+#adults{
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+#children{
+  display: inline-block;
+  float: right;
 }
 
 #city-title {
   display: flex; 
   justify-content: center;
+  margin-top: 3%;
   
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -314,9 +351,14 @@ form ul li input[class="date-input"] {
   -ms-flex-pack: center;
 }
 
+span#city{
+  padding: 0px 30px;
+}
+
 .select-arrows {
   display: inline-block;
   vertical-align: middle;
+  padding: 5px 0px;
 }
 
 #city-name{
@@ -340,7 +382,8 @@ select, input{
   margin: 12px;
 }
 
-button {
+.button {
+  clear: both;
   font-weight: 800;
   padding: 12px 0;
   width: 120px;
@@ -370,82 +413,52 @@ button {
   overflow: auto;
 }
 
-.page5 .room-grand {
+.room-grand{
   float: left;
-  height: 100%;
-  background: url(../images/grand_suite.png) no-repeat;
-  left: 0;
-  top: 0;
   width: 50%;
+  height: 100vh;
+}
+
+.room-peninsula{
+  float: left;
+  width: 50%;
+  height: 100vh;
+}
+
+.page5 img {
+  width:100%;
   height: 100%;
   z-index: -1;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+}
+
+.text{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: 
 }
 
-.page5 .room-peninsula {
-  float: left;
-  height: 100%;
-  background: url(../images/peninsula_suite.png) no-repeat;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: -1;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h4#grandSuite{
+  border-bottom: 2px solid #fff;
+  padding-bottom: 14px;
+  margin: 0 auto;
+
 }
 
-.room-grand .extra {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    display: none;
-    color: #FFF;
-}
-.room-grand:hover .extra {
-    display: inline-block;
-    color: white;
-    font-family: "Source Sans Pro";
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 1.2;
-    text-align: center;
-    display: block;
-    background: rgba(0, 0, 0, .6);
+h4#peninsulaSuite{
+  border-bottom: 2px solid #fff;
+  padding-bottom: 14px;
 }
 
-.room-peninsula .extra {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    display: none;
-    color: #FFF;
-}
-.room-peninsula:hover .extra {
-    display: inline-block;
-    color: white;
-    font-family: "Source Sans Pro";
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 1.2;
-    text-align: center;
-    display: block;
-    background: rgba(0, 0, 0, .6);
+span.extra {
+  width: 80%;
+  display: none;
+  color: white;
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.2;
+  text-align: center;
 }
 
 

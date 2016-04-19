@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/onepage-scroll.css">
+		<link rel="stylesheet" href="css/datepicker.css">
+	
 		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic,900,700italic,700,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700italic,700,600italic,600,400italic,300italic,300,200italic' rel='stylesheet' type='text/css'>
 	</head>
@@ -19,7 +21,7 @@
 			<a href="index.html"><img id="logo" src="images/logo.png" style="width:170px;"/></a>
 		</header>
 		<footer class="scroll-steps">
-			<h3 class="steps">Scroll to start</h3>
+			<h3 class="steps"><span id="pagination">Scroll to start</span></h3>
 			<a href=".page2">
 				<img id="arrow" src="images/scrollarrow.png" style="width:30px;"></a>
 		</footer>
@@ -30,19 +32,20 @@
 	  			<div class="welcomeText">
 		  			<h1>Welcome to <br> The Peninsula Hotel</h1>
 		  			<hr>
-		  			<h2>Exclusive <span class="VIP">VIP Member Only</span> Reservation</h2>
+		  			<h2>Exclusive <span id="VIP">VIP Member Only</span> Reservation</h2>
 		  		</div>
 	    	</section>
 
 	    	<section class="page2">
 				<div class="guestext">	
-					<h4 class="headline">May we have your information, please?</h4>
+					<h4 class="headline" id="question">May we have your information, please?</h4>
 					<form action="#" method="post">
 						<ul id="guest-info" >
 							<li>
 								<label for ="name"></label>
 								<input id="name-input" type="text" name="name" placeholder="First and Last name"/>
-								<input id="name-input" type="text" name="name" placeholder="Email Address"/>
+								<input id="email-input" type="text" name="name" placeholder="Email Address"/>
+								<button id="name-button" name="reserve" class="button">Save</button>
 							</li>
 						</ul>
 					</form>
@@ -61,7 +64,7 @@
 
 	    	<section class="page3">
 				<div class="assistantext">
-					<h4 class="headline">Hello <span class="customer-name">Paola</span></h4>
+					<h4 class="headline">Hello</h4><span id="customer-name" class="headline"></span>
 					<h5 class="body-text">This is Dominic Coles, your personal assistant during the stay at Peninsula Hotel. Please feel free to let Dominic know if you have any concerns or questions regarding your stay with us.</h5>
 					<br>
 					<h5 id="contact"><span id="bold">CONTACT:</span><br>Dominic.Cole@peninsulahotel.com<br>
@@ -72,60 +75,63 @@
 	    	<section class="page4">
 	    		<div class= "locationText">
 					<ul id="city-list">
-						<li><a href="#hongkong">Hong Kong</a></li>
-						<li><a href="#shanghai">Shanhai</a></li>
-						<li><a href="#Beijing">Beijing</a></li>
-						<li><a href="#">Tokyo</a></li>
-						<li><a href="#">New York</a></li>
-						<li><a href="#Chicago">Chicago</a></li>
-						<li><a href="#">Beverly Hills</a></li>
-						<li><a href="#">Paris</a></li>
-						<li><a href="#">Bangkok</a></li>
-						<li><a href="#">Manila</a></li>
+						<li id="HongKong"><a href="#">Hong Kong</a></li>
+						<li id="Shanghai"><a href="#">Shanghai</a></li>
+						<li id="Beijing"><a href="#">Beijing</a></li>
+						<li id="Tokyo"><a href="#">Tokyo</a></li>
+						<li id="NewYork"><a href="#">New York</a></li>
+						<li id="Chicago"><a href="#">Chicago</a></li>
+						<li id="BeverlyHills"><a href="#">Beverly Hills</a></li>
+						<li id="Paris"><a href="#">Paris</a></li>
+						<li id="Bangkok"><a href="#">Bangkok</a></li>
+						<li id="Manila"><a href="#">Manila</a></li>
 					</ul>
 
 				<div id="city-title">
 					<a href="default.asp">
 						<img class="select-arrows" src="images/leftarrow.png" style="width:18px;"></a>
-					<h4 id="city-name" class="headline">New York</h4>
+					<h4 id="city-name" class="headline"><span id="city">New York</span></h4>
 					<a href="default.asp">
 						<img class="select-arrows" src="images/rightarrow.png" style="width:18px;"></a>
 				</div>
 
 				<div id="form-box">
 					<form action="#" method="post">
-						<ul id="dates">
-							<li>
-								<label class="body-text" for="checkin" style="font-weight:400">Check In:</label>
-								<input type="text" class="date-input" name="" placeholder="Pick your date"/>
-								<img src="images/datepicker_arrow.png" id="datepicker_arrow" style="width:10px">
-							</li>
+						<div class="top-container">
+							<ul class="dates">
+								<li>
+									<label class="body-text" for="checkin" style="font-weight:400">Check In:</label>
+									<input class="datepicker" type="text" placeholder="Pick your date"/>
+								</li>
 
-							<li>
-								<label class="body-text" for="checkin" style="font-weight:400">Check Out:</label>
-								<input type="text" class="date-input" name="" placeholder="Pick your date"/>
-								<img src="images/datepicker_arrow.png" id="datepicker_arrow" style="width:10px">
-							</li>	
+								<li>
+									<label class="body-text" for="checkin" style="font-weight:400">Check Out:</label>
+									<input class="datepicker" type="text" placeholder="Pick your date"/>
+								</li>
+							</ul>	
 
-							<li>
-								<label class="body-text" for="adults" style="font-weight:400">Adults:</label>
-								<select name="adults">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="3">4</option>
-								</select>
-							</li>
+						<div class="bottom-container">
+							<ul class="people-count">
+								<li id="adults">
+									<label class="body-text" for="adults" style="font-weight:400">Adults:</label>
+									<select class="select-forms" name="adults">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="3">4</option>
+									</select>
+								</li>
 
-							<li>
-								<label class="body-text" for="checkin" style="font-weight:400">Children (0-11):</label>
-								<select name="children">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								</select>
-							</li>	
+								<li id="children">
+									<label class="body-text" for="checkin" style="font-weight:400">Children (0-11 yrs):</label>
+									<select class="select-forms" name="children">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									</select>
+								</li>
+							</ul>	
 
-							<button name="reserve">Reserve</button>		
+							<button id="location-button" name="reserve" class="button">Reserve</button>		
 						</ul>
 					</form>
 				</div>
@@ -133,30 +139,34 @@
 	    	</section>
 
 	    	<section class="page5">
-	    		<a href="#">
-		    		<div class= "room-grand">
-		    			<h4 class="headline">Grand Suite<hr></h4>
-						<span class="extra">The stately Grand Suite occupies a 20th floor corner location of the hotel overlooking Fifth Avenue with views of Central Park. This magnificent suite includes an elegantly appointed living room with a decorative fireplace and 55-inch LED television and a separate dining room that seats eight people with a butler's pantry. The Grand Suite features a dressing area with a vanity and two oversized walk-in closets, a lavish marble bathroom with double wash basins and a television over the bathtub, and a guest powder room.<br><br>
-						SIZE: 1,625 sq ft / 151 sq m <br>
-						VIEW: Fifth Avenue and Central Park city views <br>
-						BED: King
-						</span>				
-					</div>
-				</a>
+	    		<div class= "room-grand">
+					<a href="#"><img class="room-images" src="images/grand_suite.png"></a>
+			    		<div class="text">	
+			    			<h4 class="headline" id="grandSuite">Grand Suite</h4>
+							<span class="extra">The stately Grand Suite occupies a 20th floor corner location of the hotel overlooking Fifth Avenue with views of Central Park. This magnificent suite includes an elegantly appointed living room with a decorative fireplace and 55-inch LED television and a separate dining room that seats eight people with a butler's pantry. The Grand Suite features a dressing area with a vanity and two oversized walk-in closets, a lavish marble bathroom with double wash basins and a television over the bathtub, and a guest powder room.<br><br>
+							SIZE: 1,625 sq ft / 151 sq m <br>
+							VIEW: Fifth Avenue and Central Park city views <br>
+							BED: King
+							</span>
+						</div>
+					<button id="grand-button" name="reserve" class="button">Reserve</button>		
+				</div>
 				
-				<a href="#">
-					<div class= "room-peninsula">
-						<h4 class="headline">Peninsula Suite<hr></h4>
+				<div class= "room-peninsula">
+					<a href="#"><img class="room-images" src="images/peninsula_suite.png"></a>
+					<div class="text">	
+						<h4 class="headline" id="peninsulaSuite">Peninsula Suite</h4>
 						<span class="extra">The Peninsula Suite is the ultimate premier accommodation in New York. This quintessential New York pied-à-terre features stunning cityscape views of Fifth Avenue and comprises six rooms, including a spacious master bedroom and bathroom, dining room with adjoining kitchen, elegant living room, study, second bedroom and bathroom, and guest powder room.<br><br>
 						SIZE: 3,300 sq ft / 307 sq m <br>
 						VIEW: Fifth Avenue city views <br>
 						BED: King in master, king or two twins in second bedroom
 						</span>
 					</div>
-				</a>
+					<button id="peninsula-button" name="reserve" class="button">Reserve</button>	
+				</div>
 	    	</section>
 
-	    	<section class="page6">
+	    	<!-- <section class="page6">
 	    		<div class= "transportation">
 					
 				</div>
@@ -170,7 +180,7 @@
 	    	<section class="page8">
 	    		<div class="summary">
 	    		</div>
-	    	</section>
+	    	</section> -->
 
  		</div>
 
@@ -178,6 +188,8 @@
 		<script src="js/jquery.onepage-scroll.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/style.js"></script>
+		<script src="http:/cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>`
+	
 
 	</body>
 	
