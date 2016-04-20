@@ -124,13 +124,31 @@ $(function(){
 
 
 
+
+// Function for saving location data
+
+$(function(){
+
+  $("#location-button").click(pickDates);
+
+  
+    function pickDates(event){
+    event.preventDefault();
+
+    alert('Your information is saved!');
+
+  }
+
+});
+
+
+
+
 // // Function for scroll text on every page
 
 // $(function(){
 
 //   $(window).scroll(function(){
-
-//       // Declare variable that will be used to track the name
  
 
 
