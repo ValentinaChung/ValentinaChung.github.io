@@ -143,7 +143,6 @@ $(function(){
 
 
 
-
 // // Function for scroll text on every page
 
 // $(function(){
