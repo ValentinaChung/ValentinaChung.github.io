@@ -136,7 +136,6 @@ $(function(){
     event.preventDefault();
 
     alert('Your information is saved!');
-
   }
 
 });
