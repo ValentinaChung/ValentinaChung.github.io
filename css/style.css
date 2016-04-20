@@ -425,23 +425,41 @@ select, input{
   height: 100vh;
 }
 
-.page5 img {
+.room-grand img {
   width:100%;
   height: 100%;
+  height: auto;
   z-index: -1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.room-grand img:hover  {
+  width: 120%;
+  height: auto;
+}
+
+.room-peninsula img {
+  width:100%;
+  height: 100%;
+  height: auto;
+  z-index: -1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.room-peninsula img:hover {
+  width: 120%;
+  height: auto;
 }
 
 .text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: 
+  background: rgba(0, 0, 0, .8);
 }
 
 h4#grandSuite{
   border-bottom: 2px solid #fff;
   padding-bottom: 14px;
-  margin: 0 auto;
   position: absolute;
   left: 220px;
   top: 350px;
